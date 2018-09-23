@@ -1,0 +1,41 @@
+<div class="row mt-3">
+  <div class="offset-md-3 col-md-6">
+
+    <div class="row">
+        <div class="col-md-8" style="vertical-align: text-bottom">
+          <h4> {{ filtro? filtro: "Lista de produtos" }} </h4>
+          <hr/>
+        </div>
+        <div class="col-md-4">
+          <div class="input-group stylish-input-group">
+              <input type="text" class="form-control" placeholder="Procurar" [(ngModel)]="filtro">
+          </div>
+        </div>
+    </div>
+  
+    <mat-list>
+      <div *ngFor="let produto of produtos | filtroProduto: filtro; index as idx">
+        <mat-list-item  *ngIf="exibeProduto(idx)">
+          <img matListAvatar [src]="getImagem(produto)" alt="...">
+          <h3 matLine> {{produto.nome}} </h3>
+          <p matLine>
+            <span> {{ descricaoCategoria(produto.categoria) }}</span>
+          </p>
+
+          <div class="float-right">  
+            <mat-form-field>
+              <input type="number" matInput placeholder="Quantidade">
+            </mat-form-field>
+          </div>
+        </mat-list-item>
+      </div>
+    </mat-list>
+  
+    <mat-paginator [length]="length"
+                [pageSize]="pageSize"
+              [pageSizeOptions]="pageSizeOptions"
+              (page)="updatePaginator($event)">
+    </mat-paginator>
+  
+  </div>
+</div>
