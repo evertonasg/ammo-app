@@ -14,7 +14,7 @@ Para consumir a WebApi que estará rodando em ambiente local deve-se executar a 
 Para consumir a WebApi que publicada em ambiente de produção deve-se executar a seguinte linha de comando: 
 "ng build --prod"
 
-**A atribuição das URL's que definem o endereço da WebApi este am "src/environments/"
+**A atribuição das URL's que definem o endereço da WebApi este em "src/environments/"
 arquivo "environment.js" (ambiente local) e "environment.prod.ts" (ambiente de produção)
 
 EXECUÇÃO:
