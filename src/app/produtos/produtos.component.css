@@ -2,3 +2,12 @@
     height: 450px;
     overflow-y: auto;
 }
+
+.content {
+    position:absolute;
+    top: 90px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    overflow-y:scroll;
+}
