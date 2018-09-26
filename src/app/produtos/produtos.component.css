@@ -1,13 +1,12 @@
 .mat-list {
-    height: 450px;
+    height: 70%;
     overflow-y: auto;
 }
 
 .content {
     position:absolute;
-    top: 90px;
+    top: 80px;
     left:0px;
     right:0px;
     bottom:0px;
-    overflow-y:scroll;
 }
